@@ -41,12 +41,22 @@ export default {
       });
     },
     imageStyle: function() {
-      return {
-        backgroundImage: `url(https://static01.nyt.com/${this.largeImage.url})`,
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        width: '400px',
-        height: '286px'
+      if (window.innerWidth >= 450) {
+        return {
+          backgroundImage: `url(https://static01.nyt.com/${this.largeImage.url})`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          width: '400px',
+          height: '286px'
+        }
+      } else {
+        return {
+          backgroundImage: `url(https://static01.nyt.com/${this.thumbImage.url})`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          width: '75px',
+          height: '75px'
+        }
       }
     }
   },
@@ -61,8 +71,9 @@ export default {
 
 <style lang="scss">
   .article {
-    width: 50vw;
-    height: 90vh;
+    background-color: white;
+    width: 100vw;
+    height: 45vh;
     box-sizing: border-box;
     padding: 30px 0;
     .headline {
@@ -72,28 +83,50 @@ export default {
       }
       border-bottom: 1px solid #e2e2e2;
       padding-bottom: 12px;
-      width: 75%;
       margin: 0 auto 6px;
+      width: 90%;
       text-align: left;
-      font-size: 1.5625rem;
-      line-height: 1.6875rem;
+      font-size: 1rem;
+      line-height: 1.1rem;
       font-weight: 700;
     }
     .byline {
       text-align: left;
-      width: 75%;
+      width: 90%;
       margin: 0 auto 16px;
       text-transform: uppercase;
       font-size: 12px;
       font-weight: 100;
     }
     .snippet {
-      width: 75%;
+      width: 90%;
       margin: 0 auto;
       text-align: left;
       font-family: Georgia, serif;
       span.text::after {
         content: " "
+      }
+    }
+  }
+
+  @media (min-width: 450px) {
+    .article {
+      width: 50vw;
+      height: 90vh;
+      .headline {
+        .image {
+
+        }
+        width: 75%;
+        font-size: 1.5625rem;
+        line-height: 1.6875rem;
+        font-weight: 700;
+      }
+      .byline {
+        width: 75%
+      }
+      .snippet {
+        width: 75%
       }
     }
   }

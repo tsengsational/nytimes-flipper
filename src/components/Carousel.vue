@@ -60,15 +60,20 @@ export default {
     opacity: 0;
   }
   .carousel {
+    box-sizing: border-box;
     position: relative;
+    height: calc(100vh - 58px)
   }
   .first {
     position: absolute;
     top: 0;
     left: 0;
   }
-  .last {
-    position: absolute;
-    right: 0;
+
+  @media (min-width: 450px) {
+    .first {
+      top: 0;
+      left: 0;
+    }
   }
 </style>
