@@ -47,6 +47,7 @@ export default {
   }
   #logo {
     max-height: 34px;
+    max-width: 50%;
     position: absolute;
     left: 6%;
     top: 24px;
@@ -65,7 +66,7 @@ export default {
     margin-bottom: .75rem;
     position: absolute;
     right: 7%;
-    width: 25%;
+    width: 33%;
     user-select: none;
     z-index: 3;
     -ms-user-select: none;
@@ -73,5 +74,14 @@ export default {
     -moz-appearance: none;
     -webkit-user-select: none;
     -webkit-appearance: none;
+  }
+
+  @media (min-width: 450px) {
+    #logo {
+
+    }
+    .selection-select {
+      width: 25%;
+    }
   }
 </style>

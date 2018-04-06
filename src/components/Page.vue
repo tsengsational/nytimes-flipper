@@ -24,7 +24,7 @@ export default {
   data: function() {
     return {
       flip: false,
-      flippedIndex: 999
+      flippedIndex: 999,
     }
   },
   computed: {
@@ -73,29 +73,27 @@ export default {
 <style lang="scss">
   .flip-container {
     position:absolute;
-    right: 0;
-    top: left;
+    bottom: 0;
     perspective: 100vw;
-    perspective-origin: left top;
+    perspective-origin: center top;
     .flipper {
-      transform-origin: 0% 0%;
+      transform-origin: 0% 50%;
     }
   }
   .flip-container.flip .flipper {
-    transform: rotateY(-180deg);
-    transform-origin: 0% 0%;
-
-
+    transform: rotateX(180deg);
+    transform-origin: 100% 50%;
   }
 
   .flip-container, .front, .back {
-    width: 50vw;
-    // height: 480px;
+    height: 50%;
   }
 
   .flipper {
     transition: 0.6s;
     transform-style: preserve-3d;
+    transform-origin: 100% 50%;
+
     position: relative;
   }
 
@@ -103,17 +101,55 @@ export default {
     backface-visibility: hidden;
     position: absolute;
     background-color: white;
-    height: 90vh;
-    // top: 0;
-    // left: 0;
   }
 
   .front {
     /* for firefox 31 */
-    transform: rotateY(0deg);
+    // transform: rotateX(0deg);
   }
 
   .back {
-    transform: rotateY(180deg);
+    transform: rotate3D(0, 1, 0, 180deg);
+    transform-origin: center;
+    .article.top {
+      transform: rotate(180deg);
+    }
+  }
+
+  @media (min-width: 450px) {
+    .flip-container {
+      position:absolute;
+      right: 0;
+      top: 0;
+      perspective: 100vw;
+      perspective-origin: left top;
+      .flipper {
+        transform-origin: 0% 50%;
+      }
+    }
+    .flip-container, .front, .back {
+      width: 50vw;
+      // height: 480px;
+    }
+    .flip-container.flip .flipper {
+      transform: rotateY(-180deg);
+      transform-origin: 0% 0%;
+    }
+    .front, .back {
+      backface-visibility: hidden;
+      position: absolute;
+      background-color: white;
+      height: 90vh;
+    }
+    .front {
+      /* for firefox 31 */
+      transform: rotateY(0deg);
+    }
+    .back {
+      transform: rotateY(180deg);
+      .article.top {
+        transform: rotate(0deg);
+      }
+    }
   }
 </style>
