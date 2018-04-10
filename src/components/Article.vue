@@ -78,17 +78,21 @@ export default {
     padding: 30px 0;
     .headline {
       .image {
-        margin-bottom: 16px;
-        min-width: 100%;
+        display: inline-block;
       }
       border-bottom: 1px solid #e2e2e2;
-      padding-bottom: 12px;
       margin: 0 auto 6px;
       width: 90%;
       text-align: left;
-      font-size: 1rem;
-      line-height: 1.1rem;
+      font-size: 1.15rem;
+      line-height: 1.25rem;
       font-weight: 700;
+      span {
+        display: inline-block;
+        width: calc(90vw - 90px);
+        margin-left: 10px;
+        vertical-align: top;
+      }
     }
     .byline {
       text-align: left;
@@ -115,12 +119,21 @@ export default {
       width: 50vw;
       .headline {
         .image {
-
+          min-width: 100%;
+          margin-bottom: 16px;
         }
         width: 75%;
+        padding-bottom: 12px;
         font-size: 1.5625rem;
         line-height: 1.6875rem;
         font-weight: 700;
+        span {
+          display: inline;
+          width: 100%;
+          margin-left: 0;
+          position: inherit;
+          top: 0;
+        }
       }
       .byline {
         width: 75%;
