@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="footer">
     <div class="credit">
-      Created by <a href="#">Jason Tseng</a>. Data courtesy of <a href="#">The New York Times</a>
+      Created by <a href="http://www.jasontseng.com">Jason Tseng</a>. Data courtesy of <a href="https://developer.nytimes.com/">The New York Times</a>
     </div>
   </div>
 </template>
