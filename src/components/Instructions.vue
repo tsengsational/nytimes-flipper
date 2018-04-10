@@ -45,10 +45,10 @@ export default {
       box-shadow: inset 0px 0px 200px 102px white, 0px 0px 30px 20px white;
       text-align: center;
       filter: drop-shadow(0px 0px 12px white);
-      font-size: 2rem;
-      width: 30rem;
+      font-size: 1.3rem;
+      width: 15rem;
       top: calc(50vh - 8px);
-      left: calc(50vw - 15rem);
+      left: calc(50vw - 7.5rem);
       z-index: 99999999;
     }
   }
@@ -57,7 +57,9 @@ export default {
   @media (min-width: 450px) {
     .modal {
       .instructions {
-        font-size: 1.3rem;
+        font-size: 2rem;
+        left: calc(50vw - 15rem);
+        width: 30rem;
       }
     }
   }

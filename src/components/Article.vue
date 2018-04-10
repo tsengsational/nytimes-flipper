@@ -73,7 +73,7 @@ export default {
   .article {
     background-color: white;
     width: 100vw;
-    height: 45vh;
+    height: 43vh;
     box-sizing: border-box;
     padding: 30px 0;
     .headline {
@@ -102,6 +102,7 @@ export default {
       width: 90%;
       margin: 0 auto;
       text-align: left;
+      font-size: 14px;
       font-family: Georgia, serif;
       span.text::after {
         content: " "
@@ -122,10 +123,11 @@ export default {
         font-weight: 700;
       }
       .byline {
-        width: 75%
+        width: 75%;
       }
       .snippet {
-        width: 75%
+        width: 75%;
+        font-size: 16px;
       }
     }
   }
