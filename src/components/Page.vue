@@ -37,19 +37,16 @@ export default {
   },
   watch: {
     flip: function (newState, oldState) {
-      console.log(newState, oldState)
       if (newState === true) {
         setTimeout(() => {
           this.flippedIndex = this.index + 1
           let indexViewed = this.index + 2
           this.$emit('pageFlip', indexViewed)
-          console.log("flipped: ", this.flippedIndex, this.index)
 
         }, 600)
       } else if (newState === false) {
           this.flippedIndex = 999 - this.index
           this.$emit('pageFlip', this.index)
-          console.log("unflipped: ", this.flippedIndex, this.index)
       }
     },
     resetPages: function (newState, oldState) {
@@ -64,7 +61,6 @@ export default {
     },
   },
   created: function () {
-    console.log("page created: ", this.articles)
     this.flippedIndex = 999 - this.index
   }
 }

@@ -59,12 +59,6 @@ export default {
         }
       }
     }
-  },
-  updated: function() {
-    // console.log('updating: ', this.article.headline.main)
-  },
-  created: function () {
-    // console.log('created', this.article.headline.main)
   }
 }
 </script>
