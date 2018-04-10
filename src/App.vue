@@ -1,7 +1,9 @@
 <template>
   <div id="app">
+    <Instructions/>
     <Nav :handleSelect="handleSelect" />
     <Carousel :articles="articles" :getMore="getMore" :resetPages="resetPages" />
+    <Footer/>
   </div>
 </template>
 
@@ -9,6 +11,8 @@
 import Nav from './components/Nav'
 import Carousel from './components/Carousel'
 import config from './config'
+import Footer from './components/Footer'
+import Instructions from './components/Instructions'
 
 var startArticles = [
   {
@@ -49,7 +53,9 @@ export default {
   name: 'app',
   components: {
     Nav,
-    Carousel
+    Carousel,
+    Footer,
+    Instructions
   },
   watch: {
     selected: function (newSelect, oldSelect) {
@@ -147,5 +153,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+body {
+  margin: 0;
 }
 </style>

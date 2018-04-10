@@ -1,4 +1,6 @@
 $font_header: "nyt-cheltenham";
+$gray_border: 1px solid #e2e2e2;
+$article_height: calc(100vh - 58px - 30px);
 
 @font-face {
   font-family: "nyt-cheltenham";

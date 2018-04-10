@@ -71,6 +71,8 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../assets/settings.scss";
+
   .flip-container {
     position:absolute;
     bottom: 0;
@@ -129,7 +131,6 @@ export default {
     }
     .flip-container, .front, .back {
       width: 50vw;
-      // height: 480px;
     }
     .flip-container.flip .flipper {
       transform: rotateY(-180deg);
@@ -139,7 +140,7 @@ export default {
       backface-visibility: hidden;
       position: absolute;
       background-color: white;
-      height: 90vh;
+      height: $article_height;
     }
     .front {
       /* for firefox 31 */
