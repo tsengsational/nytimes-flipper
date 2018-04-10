@@ -56,13 +56,15 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../assets/settings.scss";
+
   .hidden {
     opacity: 0;
   }
   .carousel {
     box-sizing: border-box;
     position: relative;
-    height: calc(100vh - 58px)
+    height: $article_height;
   }
   .first {
     position: absolute;

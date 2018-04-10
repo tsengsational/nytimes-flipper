@@ -40,10 +40,12 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../assets/settings.scss";
+
   .nav {
     box-sizing: border-box;
     height: 58px;
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom: $gray_border;
   }
   #logo {
     max-height: 34px;

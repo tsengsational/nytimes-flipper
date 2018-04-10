@@ -112,7 +112,6 @@ export default {
   @media (min-width: 450px) {
     .article {
       width: 50vw;
-      height: 90vh;
       .headline {
         .image {
 
