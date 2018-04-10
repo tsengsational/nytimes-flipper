@@ -52,7 +52,7 @@ export default {
     max-width: 50%;
     position: absolute;
     left: 6%;
-    top: 24px;
+    top: 16px;
   }
   .section-select {
     appearance: none;
