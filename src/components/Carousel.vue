@@ -36,17 +36,14 @@ export default {
     },
     pageArticles: function() {
       let pageArticles = this.articles.slice(1, this.articles.length - 1)
-      console.log("pageArticles: ", pageArticles.length)
       return pageArticles
     }
   },
   methods: {
     advance: function() {
-     console.log("getting more articles")
      this.getMore()
    },
     handlePageFlip: function(index) {
-      console.log("flipped to page: ", index)
       if (index >= (this.articles.length - 6)) {
         this.advance()
      }

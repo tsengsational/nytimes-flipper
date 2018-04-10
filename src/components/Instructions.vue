@@ -19,7 +19,6 @@ export default {
       this.clicked = true;
       setTimeout(() => {
         this.transitionDone = true;
-        console.log('transition done!')
       }, 600);
     }
   }
