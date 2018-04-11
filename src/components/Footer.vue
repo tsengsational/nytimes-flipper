@@ -1,7 +1,8 @@
 <template lang="html">
   <div class="footer">
     <div class="credit">
-      Created by <a href="http://www.jasontseng.com">Jason Tseng</a>. Data courtesy of <a href="https://developer.nytimes.com/">The New York Times</a>
+      <span class="created">Created by <a href="http://www.jasontseng.com">Jason Tseng</a>. </span>
+      <a href="https://developer.nytimes.com/"><img src="http://static01.nytimes.com/packages/images/developer/logos/poweredby_nytimes_150a.png" class="nytimes-data" alt=""></a>
     </div>
   </div>
 </template>
@@ -16,8 +17,17 @@ export default {
 
   .footer {
     border-top: $gray_border;
-    padding: 5px 0;
     font-size: .8rem;
+    .credit {
+      span.created {
+        position: relative;
+        top: -10px;
+      }
+      img.nytimes-data {
+        max-height: 30px;
+        top: 0;
+      }
+    }
   }
 
   @media (min-width: 450px) {
